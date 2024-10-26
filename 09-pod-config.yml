@@ -7,10 +7,10 @@ spec:
   - name: nginx 
     image: nginx
     envFrom: 
-      configMapKeyRef:
+    - configMapKeyRef:
         name: nginx-config
 
-        
+
       # - name: course
       #   valueFrom: 
       #     configMapKeyRef:
