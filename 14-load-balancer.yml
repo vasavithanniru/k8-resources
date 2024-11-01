@@ -2,18 +2,15 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: nginx-lb
-  labels:
-    project: expense
-    module: backend
-    environment: dev
 spec:
   type: LoadBalancer
-  containers:
-  - name: nginx
-    image: nginx
-    ports:
-    - name: nginx-svc-port
-      protocol: TCP
-      port: 80  # service port
-      targetPort: 80  # Container port
+  selector: 
+    project: expense
+    module: backend
+    environment: dev  
+  ports:
+  - name: nginx-svc-port
+    protocol: TCP
+    port: 80  # service port
+    targetPort: 80  # Container port
        
