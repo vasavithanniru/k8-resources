@@ -24,9 +24,9 @@ spec:
   - name: nginx
     image: nginx
     volumeMounts:  # docker run -v hostpath:contaierpath
-    - name: "ebs-dynamic"
+    - name: ebs-dynamic
       mountPath: /usr/share/nginx/html
   volumes:
-  - name: persistent-storage
+  - name: ebs-dynamic
     persistentVolumeClaim:
       claimName: ebs-dynamic      
