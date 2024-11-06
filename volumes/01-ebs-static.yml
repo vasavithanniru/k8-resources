@@ -59,4 +59,4 @@ spec:
     protocol: TCP
     port: 80  # service port
     targetPort: 80  # container port
-    nodePort: 30007            
+    nodePort: 30007  # we can access nginx page --> ip address with node port          
